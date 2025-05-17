@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -46,6 +46,10 @@
     @apply bg-background text-foreground font-sans;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
   .teal-gradient {
     @apply bg-gradient-to-r from-teal-light to-teal;
   }
@@ -57,4 +61,33 @@
   .hero-section {
     @apply bg-navy-dark text-white py-16 md:py-24;
   }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-teal hover:bg-teal-dark text-white font-medium px-6 py-2 rounded-full transition-colors duration-300;
+}
+
+.btn-outline {
+  @apply bg-transparent border border-teal text-teal hover:bg-teal/10 font-medium px-6 py-2 rounded-full transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white hover:bg-gray-100 text-navy border border-gray-200 font-medium px-6 py-2 rounded-full transition-colors duration-300;
 }
