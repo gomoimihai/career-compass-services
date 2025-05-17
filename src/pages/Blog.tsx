@@ -91,7 +91,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 };
 
 // Blog article data
-const blogArticles = [
+export const blogArticles = [
   {
     title: 'Schimbă-ți perspectiva: Cum să depășești blocajele de la job',
     excerpt: 'Eveniment de seară în Timișoara | 10 aprilie 2024',

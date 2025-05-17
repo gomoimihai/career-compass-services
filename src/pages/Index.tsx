@@ -1,10 +1,12 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
 import { Button } from '@/components/ui/button';
 import ServiceCard from '@/components/ServiceCard';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
+import { blogArticles } from './Blog';
 
 const Index = () => {
   return (
@@ -168,6 +170,43 @@ const Index = () => {
                   <a href="#">Vezi detalii</a>
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Blog Preview Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-between items-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold">Articole recente</h2>
+              <Link to="/blog" className="flex items-center text-teal hover:text-teal-dark transition-colors">
+                Vezi toate articolele <ChevronRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {blogArticles.slice(0, 3).map((article, index) => (
+                <div key={index} className="bg-white border border-gray-100 rounded-md overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <Link to={`/blog/${article.slug}`}>
+                    <img 
+                      src={article.imageUrl} 
+                      alt={article.title} 
+                      className="w-full h-48 object-cover"
+                    />
+                  </Link>
+                  <div className="p-6">
+                    <div className="text-sm text-gray-500 mb-2">{article.date}</div>
+                    <h3 className="text-xl font-medium mb-3 hover:text-teal transition-colors">
+                      <Link to={`/blog/${article.slug}`}>{article.title}</Link>
+                    </h3>
+                    <p className="text-gray-700 mb-4 line-clamp-3">{article.excerpt}</p>
+                    <Button asChild variant="outline" className="text-navy hover:text-teal border-gray-200">
+                      <Link to={`/blog/${article.slug}`}>
+                        Citește mai mult
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
