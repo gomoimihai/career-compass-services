@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar } from 'lucide-react';
 
@@ -15,9 +16,9 @@ const FreeSession: React.FC = () => {
             </div>
             
             <div className="text-left">
-              <div className="inline-block bg-teal text-white text-xs uppercase font-bold tracking-wider py-1 px-3 rounded-full mb-3">
-                Gratuit
-              </div>
+              <Badge variant="outline" className="bg-green-50 text-slate-800 border-green-100 mb-3">
+                Free
+              </Badge>
               <h3 className="text-xl font-medium mb-2">Intalnire exploratorie gratuita</h3>
               <p className="text-gray-600">30 minute</p>
             </div>

@@ -25,7 +25,9 @@ export const servicesData = [
     duration: "90 minutes",
     icon: <Calendar className="w-6 h-6" />,
     featured: true,
-    category: "individual"
+    category: "individual",
+    mostWanted: true,
+    isPaid: true
   },
   {
     id: 2,
@@ -51,7 +53,9 @@ export const servicesData = [
     duration: "3 months",
     icon: <Clock className="w-6 h-6" />,
     featured: false,
-    category: "individual"
+    category: "individual",
+    mostWanted: false,
+    isPaid: true
   },
   {
     id: 3,
@@ -77,7 +81,9 @@ export const servicesData = [
     duration: "2 weeks",
     icon: <Book className="w-6 h-6" />,
     featured: false,
-    category: "resources"
+    category: "resources",
+    mostWanted: false,
+    isPaid: true
   },
   {
     id: 4,
@@ -104,7 +110,9 @@ export const servicesData = [
     duration: "2 sessions",
     icon: <User className="w-6 h-6" />,
     featured: false,
-    category: "resources"
+    category: "resources",
+    mostWanted: false,
+    isPaid: true
   },
   {
     id: 5,
@@ -129,7 +137,9 @@ export const servicesData = [
     duration: "3 hours",
     icon: <User className="w-6 h-6" />,
     featured: false,
-    category: "group"
+    category: "group",
+    mostWanted: false,
+    isPaid: true
   },
   {
     id: 6,
@@ -156,7 +166,9 @@ export const servicesData = [
     duration: "6 months",
     icon: <Briefcase className="w-6 h-6" />,
     featured: true,
-    category: "individual"
+    category: "individual",
+    mostWanted: true,
+    isPaid: true
   },
   {
     id: 7,
@@ -181,6 +193,8 @@ export const servicesData = [
     duration: "4 hours + follow-up",
     icon: <Briefcase className="w-6 h-6" />,
     featured: false,
-    category: "group"
+    category: "group",
+    mostWanted: false,
+    isPaid: true
   }
 ];

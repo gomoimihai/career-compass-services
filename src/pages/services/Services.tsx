@@ -69,6 +69,8 @@ const Services = () => {
                   icon={service.icon}
                   slug={service.slug}
                   featured={service.featured}
+                  mostWanted={service.mostWanted}
+                  isPaid={service.isPaid}
                 />
               ))}
             </div>
@@ -94,6 +96,8 @@ const Services = () => {
                   icon={service.icon}
                   slug={service.slug}
                   featured={service.featured}
+                  mostWanted={service.mostWanted}
+                  isPaid={service.isPaid}
                 />
               ))}
             </div>
@@ -119,6 +123,8 @@ const Services = () => {
                   icon={service.icon}
                   slug={service.slug}
                   featured={service.featured}
+                  mostWanted={service.mostWanted}
+                  isPaid={service.isPaid}
                 />
               ))}
             </div>
