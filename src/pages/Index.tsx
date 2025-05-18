@@ -3,12 +3,45 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CTAButton from '@/components/CTAButton';
 import { Button } from '@/components/ui/button';
-import ServiceCard from '@/components/ServiceCard';
+import ServiceCategory from '@/components/ServiceCategory';
+import FreeSession from '@/components/FreeSession';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Book, Briefcase, User } from 'lucide-react';
 import { blogArticles } from './Blog';
 
 const Index = () => {
+  // Define the service categories with their related services
+  const serviceCategories = [
+    {
+      title: "Servicii individuale",
+      description: "Coaching personalizat pentru dezvoltarea ta profesională",
+      icon: <User className="h-8 w-8 text-teal" />,
+      services: [
+        { name: "Career Discovery Session", slug: "career-discovery" },
+        { name: "Career Transition Coaching", slug: "career-transition" },
+        { name: "Executive Coaching", slug: "executive-coaching" }
+      ]
+    },
+    {
+      title: "Servicii de grup",
+      description: "Sesiuni de grup pentru dezvoltare colectivă",
+      icon: <Briefcase className="h-8 w-8 text-teal" />,
+      services: [
+        { name: "Career Clarity Workshop", slug: "career-clarity-workshop" },
+        { name: "Team Building", slug: "team-building" }
+      ]
+    },
+    {
+      title: "Resurse profesionale",
+      description: "Instrumente pentru dezvoltarea carierei tale",
+      icon: <Book className="h-8 w-8 text-teal" />,
+      services: [
+        { name: "Resume & LinkedIn Makeover", slug: "resume-linkedin-makeover" },
+        { name: "Interview Preparation", slug: "interview-preparation" }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -121,55 +154,42 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Services Section - Redesigned */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-white border border-gray-100 rounded-lg shadow-sm">
-                <div className="w-16 h-16 bg-teal-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="h-8 w-8 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                </div>
-                <h3 className="font-medium text-lg mb-3">Intalnire exploratorie gratuita (30 min)</h3>
-                <p className="text-gray-600 mb-6">
-                  Hai împreună să descoperim dacă perspectiva mea te poate ajuta! În această sesiune gratuită vom discuta provocările tale profesionale și voi propune o strategie personalizată pe care doar tu poți accepta sau respinge.
-                </p>
-                <Button asChild variant="outline" className="rounded-full">
-                  <a href="#">Vezi detalii</a>
-                </Button>
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Serviciile noastre</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Oferim o gamă variată de servicii pentru a te ajuta să îți găsești direcția în carieră și să faci alegeri aliniate cu valorile tale.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              {/* Free Session Card - Highlighted */}
+              <div className="lg:col-span-1">
+                <FreeSession />
               </div>
 
-              <div className="text-center p-6 bg-white border border-gray-100 rounded-lg shadow-sm">
-                <div className="w-16 h-16 bg-teal-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="h-8 w-8 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
+              {/* Service Categories */}
+              <div className="lg:col-span-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {serviceCategories.map((category, index) => (
+                    <ServiceCategory
+                      key={index}
+                      title={category.title}
+                      description={category.description}
+                      icon={category.icon}
+                      services={category.services}
+                    />
+                  ))}
                 </div>
-                <h3 className="font-medium text-lg mb-3">Servicii individuale 1:1</h3>
-                <p className="text-gray-600 mb-6">
-                  Consiliere personalizată pentru a-ți defini și atinge obiectivele profesionale. În sesiuni 1:1 căutăm claritate și construim o strategie bazată pe valorile tale care să te ghideze spre o carieră aliniată cu cine ești tu cu adevărat.
-                </p>
-                <Button asChild variant="outline" className="rounded-full">
-                  <a href="#">Vezi detalii</a>
-                </Button>
               </div>
-
-              <div className="text-center p-6 bg-white border border-gray-100 rounded-lg shadow-sm">
-                <div className="w-16 h-16 bg-teal-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="h-8 w-8 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-medium text-lg mb-3">Ofertă de grup</h3>
-                <p className="text-gray-600 mb-6">
-                  Lucrăm în grup pentru a ne face colectiv educație pentru a găcea cariere mai adevărate, mai aliniate cu cine suntem. Creștere de impact îți oferă opt grupuri de sprijin față, prin video sau online pentru companiile și organizații care doresc să își susțină membrii sau colective.
-                </p>
-                <Button asChild variant="outline" className="rounded-full">
-                  <a href="#">Vezi detalii</a>
-                </Button>
-              </div>
+            </div>
+            
+            <div className="mt-12 text-center">
+              <CTAButton to="/services" variant="primary">
+                Vezi toate serviciile
+              </CTAButton>
             </div>
           </div>
         </section>

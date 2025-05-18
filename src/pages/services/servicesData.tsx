@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Book, Briefcase, Calendar, Clock, User } from 'lucide-react';
 
 export const servicesData = [
   {
@@ -22,13 +23,9 @@ export const servicesData = [
     <p>You'll leave with a clear understanding of what you want from your career and the first steps to get there.</p>`,
     price: "$297",
     duration: "90 minutes",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-      </svg>
-    ),
-    featured: true
+    icon: <Calendar className="w-6 h-6" />,
+    featured: true,
+    category: "individual"
   },
   {
     id: 2,
@@ -52,13 +49,9 @@ export const servicesData = [
     <p>Whether you're changing industries, roles, or starting your own business, this program will help you navigate the challenges and achieve a successful transition.</p>`,
     price: "$1,497",
     duration: "3 months",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 3v18h18"></path>
-        <path d="m19 9-5 5-4-4-3 3"></path>
-      </svg>
-    ),
-    featured: false
+    icon: <Clock className="w-6 h-6" />,
+    featured: false,
+    category: "individual"
   },
   {
     id: 3,
@@ -82,15 +75,9 @@ export const servicesData = [
     <p>You'll receive finalized documents ready to use in your job search, plus guidance on how to leverage your new professional brand.</p>`,
     price: "$497",
     duration: "2 weeks",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 4v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.342a2 2 0 0 0-.602-1.43l-4.44-4.342A2 2 0 0 0 13.56 2H6a2 2 0 0 0-2 2z"></path>
-        <path d="M9 13h6"></path>
-        <path d="M9 17h3"></path>
-        <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-      </svg>
-    ),
-    featured: false
+    icon: <Book className="w-6 h-6" />,
+    featured: false,
+    category: "resources"
   },
   {
     id: 4,
@@ -115,15 +102,9 @@ export const servicesData = [
     <p>You'll approach interviews with greater confidence, clarity, and the ability to authentically showcase your value to potential employers.</p>`,
     price: "$397",
     duration: "2 sessions",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-        <circle cx="9" cy="7" r="4"></circle>
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-      </svg>
-    ),
-    featured: false
+    icon: <User className="w-6 h-6" />,
+    featured: false,
+    category: "resources"
   },
   {
     id: 5,
@@ -146,15 +127,9 @@ export const servicesData = [
     <p>Limited to 8 participants to ensure personalized attention and meaningful interaction. Includes workshop materials and a follow-up resource guide.</p>`,
     price: "$197",
     duration: "3 hours",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-        <circle cx="9" cy="7" r="4"></circle>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-        <circle cx="16" cy="11" r="4"></circle>
-      </svg>
-    ),
-    featured: false
+    icon: <User className="w-6 h-6" />,
+    featured: false,
+    category: "group"
   },
   {
     id: 6,
@@ -179,13 +154,33 @@ export const servicesData = [
     <p>Coaching focuses on your specific needs, which may include strategic thinking, executive presence, communication, team leadership, work-life balance, or career advancement.</p>`,
     price: "$4,997",
     duration: "6 months",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <path d="m16 12-4-4-4 4"></path>
-        <path d="M12 16V8"></path>
-      </svg>
-    ),
-    featured: true
+    icon: <Briefcase className="w-6 h-6" />,
+    featured: true,
+    category: "individual"
+  },
+  {
+    id: 7,
+    title: "Team Building",
+    slug: "team-building",
+    shortDescription: "Strengthen team dynamics, improve communication, and build a more cohesive and effective working environment.",
+    fullDescription: `<p>Effective teams are the foundation of successful organizations. Our team building sessions help your group develop stronger connections, improve collaboration, and enhance overall performance.</p>
+    
+    <p>The Team Building program includes:</p>
+    
+    <ul>
+      <li>Pre-session assessment to identify team strengths and opportunities</li>
+      <li>Customized 4-hour workshop designed for your team's specific needs</li>
+      <li>Engaging activities that build trust and improve communication</li>
+      <li>Conflict resolution strategies for healthier workplace dynamics</li>
+      <li>Team action planning for ongoing development</li>
+      <li>30-day follow-up session to review progress and address challenges</li>
+    </ul>
+    
+    <p>Available for teams of 5-20 people, this program can be delivered in-person or virtually, depending on your team's location and preferences.</p>`,
+    price: "$2,497",
+    duration: "4 hours + follow-up",
+    icon: <Briefcase className="w-6 h-6" />,
+    featured: false,
+    category: "group"
   }
 ];
