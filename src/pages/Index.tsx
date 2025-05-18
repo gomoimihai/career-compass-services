@@ -47,33 +47,52 @@ const Index = () => {
       <Navbar />
       
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="hero-section">
+        {/* Hero Section - Redesigned */}
+        <section className="py-20 bg-gradient-to-b from-teal-light/30 to-white">
           <div className="container mx-auto px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-              <div className="max-w-xl">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12">
+              <div className="max-w-xl order-2 md:order-1">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-navy-dark">
                   Îți dorești o carieră aliniată cu tine și valorile tale?
                 </h1>
-                <p className="text-lg md:text-xl text-gray-200 mb-8">
+                <p className="text-lg md:text-xl text-gray-700 mb-8">
                   Sunt Laura, psiholog organizațional, și te ghidez să îți regăsești direcția profesională astfel încât munca să fie aliniată cu tine și cu ceea ce îți dorești cu adevărat.
                 </p>
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                  <Button className="bg-navy-dark hover:bg-navy-dark/90 text-white rounded-md px-6 py-3 text-sm font-medium">
+                  <Button className="bg-navy-dark hover:bg-navy text-white rounded-md px-6 py-3 text-sm font-medium">
                     Programează o ședință
                   </Button>
-                  <CTAButton to="/services" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <CTAButton to="/services" variant="outline" className="border-navy-dark text-navy-dark hover:bg-navy-dark/10">
                     Vreau să aflu mai mult
                   </CTAButton>
                 </div>
               </div>
-              <div className="hidden md:block relative">
-                <div className="w-80 h-80 xl:w-96 xl:h-96 rounded-full bg-teal-light/30 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80" 
-                  alt="Career Coach" 
-                  className="relative z-10 max-w-sm mx-auto rounded-lg"
-                />
+              <div className="relative order-1 md:order-2">
+                <div className="relative z-10">
+                  <div className="absolute -top-4 -left-4 w-24 h-24 bg-teal/30 rounded-full blur-xl"></div>
+                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-teal-light/40 rounded-full blur-lg"></div>
+                  <div className="overflow-hidden rounded-2xl border-4 border-white shadow-xl">
+                    <img 
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1588&q=80" 
+                      alt="Career Coach" 
+                      className="w-full h-auto transform hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                  <div className="absolute -bottom-8 -left-8 transform rotate-12">
+                    <div className="bg-white p-2 rounded-lg shadow-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="absolute -top-6 -right-6 transform -rotate-12">
+                    <div className="bg-white p-2 rounded-lg shadow-md">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-teal">
+                        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
