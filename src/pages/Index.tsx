@@ -164,26 +164,22 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              {/* Free Session Card - Highlighted */}
-              <div className="lg:col-span-1">
-                <FreeSession />
-              </div>
-
-              {/* Service Categories */}
-              <div className="lg:col-span-3">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {serviceCategories.map((category, index) => (
-                    <ServiceCategory
-                      key={index}
-                      title={category.title}
-                      description={category.description}
-                      icon={category.icon}
-                      services={category.services}
-                    />
-                  ))}
-                </div>
-              </div>
+            {/* Service Categories - Now full width row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {serviceCategories.map((category, index) => (
+                <ServiceCategory
+                  key={index}
+                  title={category.title}
+                  description={category.description}
+                  icon={category.icon}
+                  services={category.services}
+                />
+              ))}
+            </div>
+            
+            {/* Free Session Card - Now full width below other cards */}
+            <div className="mt-8">
+              <FreeSession />
             </div>
             
             <div className="mt-12 text-center">
