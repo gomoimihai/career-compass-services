@@ -13,56 +13,76 @@ const WorkbookLanding = () => {
       
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-br from-teal/5 to-white">
+        <section className="py-16 bg-gradient-to-br from-rose-50 to-orange-50 relative overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="mb-6">
-                <span className="inline-block px-4 py-2 bg-teal/10 text-teal rounded-full text-sm font-medium mb-4">
-                  ✍️ Workbook Digital
-                </span>
-              </div>
-              
-              <h1 className="text-3xl md:text-5xl font-bold mb-6 text-navy-dark">
-                Ce-mi place, de fapt, să fac?
-              </h1>
-              
-              <p className="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
-                Workbook de introspecție profesională pentru oameni care vor să-și (re)găsească direcția.
-              </p>
-              
-              <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
-                Un ghid psihologic, blând și practic, care te ajută să te reconectezi cu tine 
-                atunci când nu mai știi ce îți place sau ce te motivează.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-                <div className="flex items-center text-gray-600">
-                  <Clock className="h-5 w-5 mr-2 text-teal" />
-                  <span>5 capitole ghidate</span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Content */}
+              <div className="order-2 lg:order-1">
+                <div className="mb-6">
+                  <span className="inline-block px-4 py-2 bg-teal/10 text-teal rounded-full text-sm font-medium mb-4">
+                    ✍️ Workbook Digital
+                  </span>
                 </div>
-                <div className="flex items-center text-gray-600">
-                  <Download className="h-5 w-5 mr-2 text-teal" />
-                  <span>Format PDF</span>
-                </div>
-                <div className="flex items-center text-gray-600">
-                  <Heart className="h-5 w-5 mr-2 text-teal" />
-                  <span>Ritm personal</span>
-                </div>
-              </div>
-
-              <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 mb-8">
-                <p className="text-lg text-gray-700 mb-4">
-                  <strong>Nu e un test. Nu e un curs.</strong>
+                
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-navy-dark leading-tight">
+                  Ce-mi place, de fapt, să fac?
+                </h1>
+                
+                <p className="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
+                  Workbook de introspecție profesională pentru oameni care vor să-și (re)găsească direcția.
                 </p>
-                <p className="text-xl text-teal font-medium">
-                  👉 E o conversație sinceră cu tine, în scris.
+                
+                <p className="text-lg text-gray-600 mb-8">
+                  Un ghid psihologic, blând și practic, care te ajută să te reconectezi cu tine 
+                  atunci când nu mai știi ce îți place sau ce te motivează.
                 </p>
+
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
+                  <div className="flex items-center text-gray-600">
+                    <Clock className="h-5 w-5 mr-2 text-teal" />
+                    <span>5 capitole ghidate</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <Download className="h-5 w-5 mr-2 text-teal" />
+                    <span>Format PDF</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <Heart className="h-5 w-5 mr-2 text-teal" />
+                    <span>Ritm personal</span>
+                  </div>
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/50">
+                  <p className="text-lg text-gray-700 mb-3">
+                    <strong>Nu e un test. Nu e un curs.</strong>
+                  </p>
+                  <p className="text-xl text-teal font-medium">
+                    👉 E o conversație sinceră cu tine, în scris.
+                  </p>
+                </div>
+
+                <Button className="bg-teal hover:bg-teal-dark text-white px-8 py-4 rounded-full text-lg font-medium shadow-lg hover:shadow-xl transition-all">
+                  Cumpără Workbook-ul – 49 lei
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
 
-              <Button className="bg-teal hover:bg-teal-dark text-white px-8 py-4 rounded-full text-lg font-medium">
-                Cumpără Workbook-ul – 49 lei
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              {/* Right Image */}
+              <div className="order-1 lg:order-2">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/20 to-orange/20 rounded-3xl transform rotate-3"></div>
+                  <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                    <img 
+                      src="/lovable-uploads/93c315a9-9dfc-419c-8aa1-a8a9a55be759.png"
+                      alt="Workbook de introspecție profesională - Ce-mi place să fac?"
+                      className="w-full h-auto object-cover"
+                    />
+                  </div>
+                  {/* Floating elements */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-teal/20 rounded-full animate-pulse"></div>
+                  <div className="absolute -bottom-6 -left-6 w-12 h-12 bg-orange/20 rounded-full animate-pulse delay-500"></div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -245,7 +265,7 @@ const WorkbookLanding = () => {
         </section>
 
         {/* CTA Final */}
-        <section className="py-16 bg-teal/5">
+        <section className="py-16 bg-gradient-to-br from-rose-50 to-orange-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-6 text-navy-dark">
@@ -256,14 +276,14 @@ const WorkbookLanding = () => {
                 „Ce-mi place, de fapt, să fac?"
               </p>
 
-              <div className="bg-white rounded-2xl p-8 shadow-sm mb-8 inline-block">
+              <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 shadow-sm mb-8 inline-block border border-white/50">
                 <div className="text-3xl font-bold text-navy-dark mb-2">49 lei</div>
                 <div className="text-gray-600 mb-4">🎁 Livrare instant în inbox</div>
                 <div className="text-sm text-gray-500">Format PDF • Plata online securizată</div>
               </div>
 
               <div className="block">
-                <Button className="bg-teal hover:bg-teal-dark text-white px-12 py-4 rounded-full text-xl font-medium">
+                <Button className="bg-teal hover:bg-teal-dark text-white px-12 py-4 rounded-full text-xl font-medium shadow-lg hover:shadow-xl transition-all">
                   👉 Cumpără Workbook-ul – 49 lei
                   <ArrowRight className="ml-3 h-6 w-6" />
                 </Button>
