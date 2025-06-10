@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -322,5 +323,3 @@ const Index = () => {
 };
 
 export default Index;
-
-</edits_to_apply>

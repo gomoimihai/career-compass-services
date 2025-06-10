@@ -25,7 +25,14 @@ const Navbar: React.FC = () => {
         
         <nav className="hidden md:flex items-center space-x-8">
           <NavLink to="/about">Despre</NavLink>
-          <NavLink to="/resources">Resurse</NavLink>
+          <div className="relative">
+            <NavLink to="/resources">
+              Resurse
+              <span className="absolute -top-1 -right-6 bg-teal text-white text-xs px-2 py-0.5 rounded-full font-medium">
+                nou
+              </span>
+            </NavLink>
+          </div>
           <NavLink to="/services">Servicii</NavLink>
           <NavLink to="/blog">Blog</NavLink>
           <div className="relative group">
@@ -61,7 +68,14 @@ const Navbar: React.FC = () => {
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
               <MobileNavLink to="/about" onClick={() => setIsMenuOpen(false)}>Despre</MobileNavLink>
-              <MobileNavLink to="/resources" onClick={() => setIsMenuOpen(false)}>Resurse</MobileNavLink>
+              <div className="relative">
+                <MobileNavLink to="/resources" onClick={() => setIsMenuOpen(false)}>
+                  Resurse
+                  <span className="ml-2 bg-teal text-white text-xs px-2 py-0.5 rounded-full font-medium">
+                    nou
+                  </span>
+                </MobileNavLink>
+              </div>
               <MobileNavLink to="/services" onClick={() => setIsMenuOpen(false)}>Servicii</MobileNavLink>
               <MobileNavLink to="/blog" onClick={() => setIsMenuOpen(false)}>Blog</MobileNavLink>
               <div className="pt-2">
@@ -107,7 +121,7 @@ const MobileNavLink: React.FC<{to: string, className?: string, children: React.R
     <Link 
       to={to} 
       className={cn(
-        "text-gray-700 block py-2 border-b border-gray-100",
+        "text-gray-700 block py-2 border-b border-gray-100 flex items-center",
         className
       )}
       onClick={onClick}
