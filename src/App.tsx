@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/blog/BlogDetail";
 import Resources from "./pages/Resources";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import WorkbookLanding from "./pages/WorkbookLanding";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/resources" element={<Resources />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/workbook" element={<WorkbookLanding />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
