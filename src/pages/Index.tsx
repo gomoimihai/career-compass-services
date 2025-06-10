@@ -5,6 +5,7 @@ import CTAButton from '@/components/CTAButton';
 import { Button } from '@/components/ui/button';
 import ServiceCategory from '@/components/ServiceCategory';
 import FreeSession from '@/components/FreeSession';
+import WorkbookPromo from '@/components/WorkbookPromo';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Book, Briefcase, User } from 'lucide-react';
 import { blogArticles } from './Blog';
@@ -209,6 +210,9 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Workbook Promotion Section */}
+        <WorkbookPromo />
+
         {/* Blog Preview Section */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -318,3 +322,5 @@ const Index = () => {
 };
 
 export default Index;
+
+</edits_to_apply>
