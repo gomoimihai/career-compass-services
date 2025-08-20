@@ -56,7 +56,7 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12">
               <div className="max-w-xl order-2 md:order-1">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-navy-dark">
-                  Îți dorești o carieră aliniată cu tine și valorile tale?
+                  I love editing with lovable
                 </h1>
                 <p className="text-lg md:text-xl text-gray-700 mb-8">
                   Sunt Laura, psiholog organizațional, și te ghidez să îți regăsești direcția profesională astfel încât munca să fie aliniată cu tine și cu ceea ce îți dorești cu adevărat.
